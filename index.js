@@ -1,4 +1,6 @@
-const app = require('express')();
+// const app = require('express')();
+const express = require('express');
+const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const port = process.env.PORT || 3000;
@@ -21,6 +23,9 @@ app.get('/swift', (req, res) => {
 app.get('/css', (req, res) => {
     res.sendFile(__dirname + '/public/css.html');
 });
+
+app.use(express.static('public'));
+
 
 // tech namespace
 const tech = io.of('/tech');
