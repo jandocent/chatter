@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon ./index.js --exec",
     "start-dev": "nodemon ./index.js --exec babel-node -e js",
-    "build": "webpack",
     "test": "set DEBUG=* & nodemon ./index.js --exec babel-node -e js"
   },
   "repository": {
